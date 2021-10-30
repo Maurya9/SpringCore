@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:p="http://www.springframework.org/schema/p"
+  xmlns:util="http://www.springframework.org/schema/util"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+ https://www.springframework.org/schema/context/spring-context.xsd
+  http://www.springframework.org/schema/util
+ https://www.springframework.org/schema/util/spring-util.xsd">
+ 
+ <util:list list-class="java.util.Vector" id="list1">
+ <value>raju</value>
+ <value>faizan</value>
+ <value>ajay</value>
+ <value>vijay</value>
+ 
+ </util:list>
+ 
+ <util:map map-class="java.util.TreeMap" id="map1">
+ <entry key="java" value="8000"></entry>
+ <entry key="python" value="9000"></entry>
+ <entry key="jsp" value="3000"></entry>
+ <entry key="spring" value="10000"></entry>
+ 
+ </util:map>
+ 
+ <bean class="com.stanalone.collection.Person" name="person">
+ <property name="friends" ref="list1" />
+ 
+ </bean>
+ 
+ <bean class="com.stanalone.collection.Person" name="person1">
+ <property name="fess" ref="map1" />
+ </bean>
+ 
+ 
+ 
+ 
+ </beans>
+ 
